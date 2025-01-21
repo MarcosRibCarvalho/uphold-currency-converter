@@ -1,0 +1,77 @@
+{
+	"extends": [
+		"standard",
+		"standard-react",
+		"airbnb",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings"
+	],
+	"env": {
+		"browser": true,
+		"jest": true,
+		"es6": true
+	},
+	"rules": {
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-uses-react": 1,
+		"import/prefer-default-export": 0,
+		"react/jsx-closing-bracket-location": 0,
+		"react/jsx-indent-props": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"space-before-function-paren": 0,
+		"react/jsx-boolean-value": 0,
+		"jsx-quotes": ["error", "prefer-single"],
+		"jsx-a11y/alt-text": [
+			2,
+			{
+				"elements": ["img", "object", "area", "input[type=\"image\"]"],
+				"img": ["Image"],
+				"object": ["Object"],
+				"area": ["Area"],
+				"input[type=\"image\"]": ["InputImage"]
+			}
+		],
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function"
+			}
+		],
+		"react/require-default-props": "off",
+		"react/jsx-one-expression-per-line": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-wrap-multilines": 0,
+		"import/order": [
+			"error",
+			{
+				"groups": [["builtin", "external"], "internal", ["parent", "sibling"]],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"no-relative-import-paths/no-relative-import-paths": [
+			"warn",
+			{ "allowSameFolder": true, "rootDir": "src", "prefix": "" }
+		]
+	},
+	"plugins": ["react", "jsx-a11y", "import", "react-hooks", "no-relative-import-paths"],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"moduleDirectory": ["node_modules", "src/"]
+			}
+		}
+	}
+}
